@@ -6,31 +6,31 @@ let ctx = canvas.getContext("2d");
 let origin = { x: canvas.width / 2, y: canvas.height / 2 };
 let p = new Pen(ctx, origin);
 
-// let start = 0;
-// let end = 0;
-// p.setStrokeWeight(2);
+let start = 0;
+let end = 0;
+p.setStrokeWeight(2);
 
-// var alpha = 0;
-// p.stroke(`rgba(0, 200, 255, ${1 - alpha})`);
-// function animate() {
-//   window.requestAnimationFrame(animate);
-//   p.clear();
+var alpha = 0;
+p.stroke(`rgba(0, 200, 255, ${1 - alpha})`);
+function animate() {
+  window.requestAnimationFrame(animate);
+  p.clear();
 
-//   p.arc(0, 0, 100, start, end);
-//   if (end < 360) {
-//     end += 3;
-//   }
-//   if (end >= 360) {
-//     p.fill(`rgba(0, 200, 255, ${alpha})`);
-//     p.stroke(`rgba(0, 200, 255, ${1 - alpha})`);
-//     // p.noStroke();
-//     if (alpha < 1) {
-//       alpha += 0.01;
-//     }
-//   }
-// }
+  p.arc(0, 0, 100, start, end);
+  if (end < 360) {
+    end += 3;
+  }
+  if (end >= 360) {
+    p.fill(`rgba(0, 200, 255, ${alpha})`);
+    p.stroke(`rgba(0, 200, 255, ${1 - alpha})`);
+    // p.noStroke();
+    if (alpha < 1) {
+      alpha += 0.01;
+    }
+  }
+}
 
-// animate();
+animate();
 
 // let v1 = new V2d(100, 100);
 // let v2 = new V2d(200, 200);
@@ -76,14 +76,14 @@ let p = new Pen(ctx, origin);
 
 // animate();
 
-p.push();
-p.stroke("red");
-p.setStrokeWeight(2);
-p.line(0, 0, 100, 100);
 // p.push();
-// p.stroke("black");
-// p.line(0, 0, -100, 100);
+// p.stroke("red");
+// p.setStrokeWeight(2);
+// p.line(0, 0, 100, 100);
+// // p.push();
+// // p.stroke("black");
+// // p.line(0, 0, -100, 100);
+// // p.pop();
 // p.pop();
-p.pop();
 
-p.line(0, 0, 100, -100);
+// p.line(0, 0, 100, -100);
