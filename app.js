@@ -16,18 +16,19 @@ function animate() {
   window.requestAnimationFrame(animate);
   p.clear();
 
-  p.arc(0, 0, 100, start, end);
-  if (end < 360) {
-    end += 3;
-  }
-  if (end >= 360) {
-    p.fill(`rgba(0, 200, 255, ${alpha})`);
-    p.stroke(`rgba(0, 200, 255, ${1 - alpha})`);
-    // p.noStroke();
-    if (alpha < 1) {
-      alpha += 0.01;
-    }
-  }
+//   p.arc(0, 0, 100, start, end);
+//   if (end < 360) {
+//     end += 3;
+//   }
+//   if (end >= 360) {
+//     p.fill(`rgba(0, 200, 255, ${alpha})`);
+//     p.stroke(`rgba(0, 200, 255, ${1 - alpha})`);
+//     // p.noStroke();
+//     if (alpha < 1) {
+//       alpha += 0.01;
+//     }
+//   }
+  p.circle(random(-200, 200), random(-200, 200), 20);
 }
 
 animate();
